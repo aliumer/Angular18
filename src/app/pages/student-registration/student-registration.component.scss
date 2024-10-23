@@ -1,0 +1,49 @@
+$text-color: #ffffff;
+
+td.row-header {
+    background-color: #a7bcb9;
+  }
+
+  button {
+    width: 100px;
+  }
+
+  td.math {
+    background-color: #0d6efd;
+    color: $text-color;
+  }
+
+  td.chemistry {
+    background-color: #6c757d;
+    color: $text-color;
+  }
+
+  td.physics {
+    background-color: #198754;
+    color: $text-color;
+  }
+
+  td.ict {
+    background-color: #0dcaf0;
+    color: $text-color;
+  }
+
+  td.accounting {
+    background-color: #5dacbd;
+    color: $text-color;
+  }
+
+  td.biology {
+    background-color: #dc3545;
+    color: $text-color;
+  }
+
+  td.science {
+    background-color: #ffc107;
+    color: $text-color;
+  }
+
+  td.others {
+    background-color: #212529;
+    color: $text-color;
+  }

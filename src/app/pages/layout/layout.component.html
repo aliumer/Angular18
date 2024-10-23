@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a [routerLink]="['/dashboard']" class="nav-link text-dark">Home</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/employee']" class="nav-link text-dark">Employee</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/leave-request']" href="#" class="nav-link text-dark">Leave request</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/student']" href="#" class="nav-link text-dark">Admission</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>

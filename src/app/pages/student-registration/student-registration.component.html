@@ -1,0 +1,42 @@
+<h3>Add new student</h3>
+<hr>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Saturday</th>
+            <th scope="col">Sunday</th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let arr of dataset; let row=index;">
+            <td *ngFor="let obj of arr; let col=index;" 
+                [ngClass]="[obj.subject === 'Math' ? 'math' 
+                    : obj.subject === 'Chemistry' ? 'chemistry' 
+                        : obj.subject === 'Physics' ? 'physics' 
+                            : obj.subject === 'Biology'? 'biology' 
+                                : obj.subject === 'Science' ? 'science' 
+                                    : obj.subject === 'ICT' ? 'ict' 
+                                        : obj.subject === 'Accounting' ? 'accounting' 
+                                            : obj.subject === 'Others' ? 'others' : '' ]">
+                <input type="checkbox" id="chk-{{row}}-{{col}}" (change)="obj.state = !obj.state" /> {{obj.time}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div style="display: flex; flex-direction: row; justify-content: space-between; width: 70%;">
+    <button (click)="setSubject('Math')" class="btn btn-primary">Math</button>
+    <button (click)="setSubject('Chemistry')" class="btn btn-secondary">Chemistry</button>
+    <button (click)="setSubject('Physics')" class="btn btn-success">Physics</button>
+    <button (click)="setSubject('Biology')" class="btn btn-danger">Biology</button>
+    <button (click)="setSubject('Science')" class="btn btn-warning">Science</button>
+    <button (click)="setSubject('ICT')" class="btn btn-info">ICT</button>
+    <button (click)="setSubject('Accounting')" class="btn btn-light">Accounting</button>
+    <button (click)="setSubject('Others')" class="btn btn-dark">Others</button>
+</div>
