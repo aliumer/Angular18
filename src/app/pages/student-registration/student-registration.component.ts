@@ -67,20 +67,24 @@ export class StudentRegistrationComponent {
   ]
 
   setSubject(sub: string): void {
-    this.dataset.forEach((arr, row) => {
-      arr.forEach((obj, col) => obj.subject = obj.state ? sub : '');
+    this.dataset.forEach((row) => {
+      row.forEach((timeslot) => {
+        if (timeslot.state && timeslot.subject == '') {
+          timeslot.subject = sub;
+        }
+      });
     })
 
 
-    let saveData: Array<any> = [];
-    this.dataset.forEach(arr => {
-      const d = arr.filter(obj => obj.subject !== '');
-      if (d.length > 0) {
-        saveData = [...saveData, ...d];
+    let timetable: Array<any> = [];
+    this.dataset.forEach(row => {
+      const assignedPeriod = row.filter(period => period.subject !== '');
+      if (assignedPeriod.length > 0) {
+        timetable = [...timetable, ...assignedPeriod];
       }
     });
 
-    console.log(saveData);
+    console.log(timetable);
 
   }
 

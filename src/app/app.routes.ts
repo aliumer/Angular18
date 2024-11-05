@@ -5,6 +5,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { NewLeaveComponent } from './pages/new-leave/new-leave.component';
 import { StudentRegistrationComponent } from './pages/student-registration/student-registration.component';
+import { FeeComponent } from './pages/fee/fee.component';
 
 export const routes: Routes = [
     {
@@ -21,6 +22,7 @@ export const routes: Routes = [
             { path: 'employee', component: EmployeeComponent },
             { path: 'leave-request', component: NewLeaveComponent },
             { path: 'student', component: StudentRegistrationComponent },
+            { path: 'fee/:ref', component: FeeComponent}
         ]
     }
 ];

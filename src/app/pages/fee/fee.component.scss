@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    margin: 5px;
+    gap: 10px;
+}
+
+.container-item {
+    margin: auto;
+}
+
+input:read-only {
+    border: none;
+    background-color: darkgray;
+    color: white;
+    cursor: not-allowed;
+}

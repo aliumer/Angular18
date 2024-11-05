@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="container-item">Name</div>
+    <div class="container-item">Hours</div>
+    <div class="container-item">Rate/Hour</div>
+    <div class="container-item">Total</div>
+    <div class="container-item">Discount (%)</div>
+    <div class="container-item">Grand Total</div>
+</div>
+
+<div [formGroup]="feeForm">
+    <div class="container">
+        <div class="container-item"><input readonly id="street" type="text" formControlName="Name"></div>
+        <div class="container-item"><input readonly id="street" type="text" formControlName="Hours"></div>
+        <div class="container-item"><input id="street" type="text" formControlName="Rate"></div>
+        <div class="container-item"><input id="street" type="text" formControlName="Total"></div>
+        <div class="container-item"><input id="street" type="text" formControlName="Discount"></div>
+        <div class="container-item"><input id="street" type="text" formControlName="GrandTotal"></div>
+    </div>
+</div>
